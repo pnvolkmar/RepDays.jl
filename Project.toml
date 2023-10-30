@@ -1,0 +1,4 @@
+name = "RepDays"
+uuid = "2d9c6ccd-6cf3-4bd7-92e8-16bde75cd06b"
+authors = ["Peter Volkmar <peter.volkmar@energy2020.com>"]
+version = "0.1.0"
