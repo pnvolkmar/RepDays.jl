@@ -116,4 +116,15 @@ function find_clusters(dh, nclusters)
   return (output)
 end
 
+function plot(output::Vector{cluster})
+  elements = reduce(vcat, [t.elements for t in output])
+  reps = [t.elements[t.representative, :] for t in output]
+  n = size(elements, 2)
+  Plots.plot(1:n, elements', color="gray", label="", linealpha=0.25)
+  labels = ["Cluster " .* string(i) for i in axes(output, 1)]
+  labels = reshape(labels, 1, 2)
+  Plots.plot!(1:n, reps, label=labels)
+end
+
+
 end # module RepDays
